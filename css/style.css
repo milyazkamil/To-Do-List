@@ -1,0 +1,391 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+/*START Container Section*/
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #A18AFF;
+}
+
+#main {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  max-width: 1000px;
+  max-height: 900px;
+  width: 90%;
+  height: 75%;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+svg {
+  margin: 0 5px;
+}
+/*END Container Section*/
+
+/*START Left Section*/
+#left {
+  width: 25%;
+  height: 100%;
+  padding-right: 10px;
+  border-radius: 20px 0 0 20px;
+}
+/*END Left Section*/
+
+/*START Profile Div*/
+#profile-div {
+  display: flex;
+  justify-content: space-between;
+  height: 10%;
+  padding-left: 5px;
+}
+
+#profile-div > div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+#profile-div > div > img {
+  border-radius: 100px;
+  margin-right: 10px;
+}
+
+#profile-photo {
+  width: 100%;
+  display: flex;
+}
+
+#profile-photo > img {
+  width: 50px; 
+  height: 50px;
+}
+
+#name {
+  font-size: 20px;
+}
+
+.links-desktop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5%;
+}
+
+.links-desktop > a > svg {
+  margin: 0 5px;
+  fill: black;
+}
+
+.links-mobile > a {
+  display: none;
+  color: black;
+}
+
+.links-desktop > a, .links-mobile > a {
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.links-desktop > a:hover, .links-mobile > a:hover {
+  margin-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+/*END Profile Div*/
+
+/*START Buttons Section*/
+.navigation-btn {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  padding-left: 20px;
+  margin: 5px 0;
+  border-radius: 100px;
+  background-color: #A18AFF;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 3px solid transparent;
+}
+
+.buttons-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 85%;
+}
+
+.button-name {
+  font-size: 18px;
+}
+
+.navigation-btn svg {
+  margin-right: 5px;
+}
+
+.navigation-btn > p {
+  color: black;
+}
+/*END Buttons Section*/
+
+/*START Dark Mode Section*/
+#dark-mode-svgs {
+  display: flex;
+}
+/*END Dark Mode Section*/
+
+/*START Right Section*/
+#right {
+  background-color: #A18AFF;
+  width: 75%;
+  height: 100%;
+  border-radius: 0 20px 20px 0;
+  transition: all 0.3s ease-in;
+}
+/*END Right Section*/
+
+/*START Added Section*/
+#added {
+  overflow-y: scroll;
+  width: 100%;
+  height: 90%;
+  word-wrap: normal;
+  padding: 20px;
+}
+
+#added::-webkit-scrollbar {
+  width: 0;
+}
+
+.to-do-items {
+  text-decoration: none;
+  border: none;
+  background-color: white;
+  border-radius: 20px;
+  width: 80%;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 20px;
+}
+
+.edit {
+  border-radius: 100px;
+  padding: 10px;
+  margin-left: 15px;
+  margin-right: 11px;
+  border: none;
+  font-size: 16px;
+  background-color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.success-shadow {
+  background-color: #71e94c;
+  box-shadow: 0px 0px 87px 11px rgba(23,255,28,0.5);
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(23,255,28,0.5);
+  -moz-box-shadow: 0px 0px 87px 11px rgba(23,255,28,0.5);
+}
+
+.warning-shadow {
+  background-color: rgba(255, 0, 0, 1);
+  box-shadow: 0px 0px 87px 11px rgba(255, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 87px 11px rgba(255, 0, 0, 0.5);
+  color: white;
+}
+
+.center-div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkbox-style {
+  width: 1.5em;
+  height: 1.5em;
+  background-color: white;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  outline: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.checkbox-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.checkbox-div > svg {
+  width: 3em;
+  height: 3em;
+  margin: 0;
+}
+/*END Added Section*/
+
+/*START Add Section*/
+#add {
+  font-size: 20px;
+  padding-left: 20px;
+  height: 45px;
+  border-radius: 100px;
+  width: 90%;
+  border: none;
+}
+
+#add-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 10%;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+#add-div > svg {
+  position: absolute;
+  right: 60px;
+}
+
+#add-div > svg:hover {
+  fill: #A18AFF;
+}
+
+#sent {
+  cursor: pointer;
+}
+/*END Add Section*/
+
+/*START Responsive Section*/
+@media all and (max-width: 900px) {
+  #profile-photo {
+    flex-direction: column;
+    max-width: 250px;
+  }
+  
+  .button-name {
+    font-size: 16px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  #main {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    height: 90%;
+  }
+
+  .buttons-div {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50%;
+  }
+
+  .button-name {
+    text-align: center;
+    max-width: 60%;
+    display: none;
+  }
+  
+  .links-desktop {
+    display: none;
+  }
+
+  .navigation-btn {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 18%;
+    padding: 0;
+    margin: 0;
+    padding: 5px 0;
+  }
+
+  .navigation-btn svg {
+    margin: 0;
+  }
+
+  #left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 20%;
+    padding-right: 0;
+    border-radius: 20px 20px 20px 20px;
+  }
+
+  #right {
+    width: 100%;
+    height: 80%;
+    border-radius: 20px 20px 20px 20px;
+  }
+
+  .links-mobile > a {
+    display: block;
+    margin-left: 10px;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .checkbox-div {
+    margin-left: 5px;
+  }
+
+  #profile-photo {
+    flex-direction: row;
+  }
+
+  #profile-div {
+    height: 50%;
+    padding-left: 0;
+  }
+  
+  #profile-div > div {
+    display: flex;
+    align-items: center;
+  }
+
+  #add, #sent{
+    margin-bottom: 20px;
+  }
+
+  #add-div > svg {
+    right: 40px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  #main {
+    width: 95%;
+    height: 95%;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .navigation-svg {
+    height: 1.2em;
+    width: 1.2em;
+  }
+}
+/*END Responsive Section*/
